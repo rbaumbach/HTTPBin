@@ -1,0 +1,186 @@
+-- POST --
+
+// Note: This was generated using the iPhone 15 Pro simulator and PequenoNetworking
+// on 02/14/2024 using HTTPBin delete endpoint
+
+// Additional Note: The JSON spit out from JSONSerialization shows "<null>" for
+// "json".  However, if you use a curl command, it will actually be null:
+// "json": null (no quotes on null)
+
+// (1) Without headers and without body
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// (2) Without headers and with body
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {
+        "{\"dude\":\"true\"}": ""
+    },
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "{ \"dude\": 0 }",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Content-Length": "13",
+        "Content-Type": "text/plain",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": {
+        "dude": 0
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// (3) With headers and without body
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// (4) With headers and with body
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {
+        "{\"dude\":\"true\"}": "",
+    },
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "{ \"dude\": 0 }",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "13",
+        "Content-Type": "text/plain",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": {
+        "dude": 0
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/post"
+}

@@ -1,0 +1,180 @@
+-- DELETE --
+
+// Note: This was generated using the iPhone 15 Pro simulator and PequenoNetworking
+// on 02/14/2024 using HTTPBin delete endpoint
+
+// Additional Note: The JSON spit out from JSONSerialization shows "<null>" for
+// "json".  However, if you use a curl command, it will actually be null:
+// "json": null (no quotes on null)
+
+// (1) without headers and without parameters
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete"
+}
+
+(2) Without headers and with parameters
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete?dude=true"
+}
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "0"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete?dude=0"
+}
+
+(3) With headers and without parameters
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete"
+}
+
+(4) With headers and with parameters
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "0",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": "<null>",
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete?dude=true"
+}
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "0"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": null,
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete?dude=0"
+}

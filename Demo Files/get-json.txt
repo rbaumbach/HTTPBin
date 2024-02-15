@@ -1,0 +1,138 @@
+-- GET --
+
+// Note: This was generated using the iPhone 15 Pro simulator and PequenoNetworking
+// on 02/14/2024 using HTTPBin delete endpoint
+
+// (1) Without headers and without parameters
+
+// iPhone Pro 15 simulator
+
+{
+    "args": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get"
+}
+
+// Using curl command
+
+{
+    "args": {},
+    "headers": {
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get"
+}
+
+// (2) Without headers and with parameters
+
+// iPhone 15 simulator
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get?dude=true"
+}
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "headers": {
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get?dude=true"
+}
+
+// (3) With headers and without parameters
+
+{
+    "args": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get"
+}
+
+// Using a curl command you will get the following:
+
+{
+    "args": {},
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get"
+}
+
+(4) with headers and with parameters
+
+// iPhone 15 Pro simulator
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "User-Agent": "xctest",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get?dude=true"
+}
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "true"
+    },
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get?dude=true"
+}

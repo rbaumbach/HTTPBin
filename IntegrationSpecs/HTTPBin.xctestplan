@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9F07761F-CEFA-465A-9ECC-3186B6A7E39F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:HTTPBin.xcodeproj",
+        "identifier" : "940435AE2B653BA000C1021A",
+        "name" : "IntegrationSpecs"
+      }
+    }
+  ],
+  "version" : 1
+}
