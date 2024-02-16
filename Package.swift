@@ -1,3 +1,6 @@
+// swift-tools-version:5.7
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 //MIT License
 //
 //Copyright (c) 2024 Ryan Baumbach <github@ryan.codes>
@@ -20,9 +23,6 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
@@ -39,7 +39,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/rbaumbach/Utensils",
-            from: "0.6.0"
+            from: "0.6.1"
         )
     ],
     targets: [
@@ -48,8 +48,5 @@ let package = Package(
             dependencies: ["Utensils"]
         )
     ],
-    swiftLanguageVersions: [
-        .v5,
-        .upToNextMajor(from: "5.5")
-    ]
+    swiftLanguageVersions: [.v5]
 )
