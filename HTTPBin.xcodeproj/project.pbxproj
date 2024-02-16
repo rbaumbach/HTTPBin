@@ -53,6 +53,7 @@
 		94DAA1E22B7E8B280052CA32 /* file-upload-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "file-upload-json.txt"; sourceTree = "<group>"; };
 		94DAA1E32B7E8D540052CA32 /* misc-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "misc-json.txt"; sourceTree = "<group>"; };
 		94DAA1E52B7EF2D60052CA32 /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
+		94DAA1E72B7F9C860052CA32 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 		941639EE2B654773005AC3E3 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				94DAA1E72B7F9C860052CA32 /* .ruby-version */,
 				941639F02B65479C005AC3E3 /* .swiftlint.yml */,
 				941639F22B65494E005AC3E3 /* Fastfile */,
 				941639E32B653DB9005AC3E3 /* Gemfile */,
@@ -161,11 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				9471F5102B7D2BAE0065CD44 /* delete-json.txt */,
+				94DAA1E22B7E8B280052CA32 /* file-upload-json.txt */,
 				9471F5142B7D6C270065CD44 /* get-json.txt */,
+				94DAA1E32B7E8D540052CA32 /* misc-json.txt */,
 				9471F5122B7D674F0065CD44 /* post-json.txt */,
 				9471F5132B7D69B20065CD44 /* put-json.txt */,
-				94DAA1E22B7E8B280052CA32 /* file-upload-json.txt */,
-				94DAA1E32B7E8D540052CA32 /* misc-json.txt */,
 			);
 			path = "Demo Files";
 			sourceTree = "<group>";

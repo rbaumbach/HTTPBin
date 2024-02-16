@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.platform              = :ios
   spec.ios.deployment_target = '12.0'
   spec.source_files          = 'Sources/HTTPBin/**/*.{swift}'
-  spec.swift_version         = '5.3'
+  spec.swift_version         = '5.5'
 end
