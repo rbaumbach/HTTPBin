@@ -12,6 +12,7 @@
 		940435AA2B65377B00C1021A /* HTTPBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940435A92B65377B00C1021A /* HTTPBin.swift */; };
 		940435B32B653BA000C1021A /* HTTPBin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9404359E2B65366300C1021A /* HTTPBin.framework */; };
 		941639FB2B654D8A005AC3E3 /* HTTPBinIntegrationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941639FA2B654D8A005AC3E3 /* HTTPBinIntegrationSpec.swift */; };
+		94DAA1E62B7EF2D60052CA32 /* file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 94DAA1E52B7EF2D60052CA32 /* file.txt */; };
 		CAF8764CB7D2CC76C64D0E36 /* Pods_HTTPBin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8D4F60A6C901D63A953067 /* Pods_HTTPBin.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,9 @@
 		9471F5122B7D674F0065CD44 /* post-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "post-json.txt"; sourceTree = "<group>"; };
 		9471F5132B7D69B20065CD44 /* put-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put-json.txt"; sourceTree = "<group>"; };
 		9471F5142B7D6C270065CD44 /* get-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "get-json.txt"; sourceTree = "<group>"; };
+		94DAA1E22B7E8B280052CA32 /* file-upload-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "file-upload-json.txt"; sourceTree = "<group>"; };
+		94DAA1E32B7E8D540052CA32 /* misc-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "misc-json.txt"; sourceTree = "<group>"; };
+		94DAA1E52B7EF2D60052CA32 /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				941639FA2B654D8A005AC3E3 /* HTTPBinIntegrationSpec.swift */,
-				940435B92B653BF500C1021A /* HTTPBin.xctestplan */,
+				94DAA1E42B7EF2BF0052CA32 /* Resources */,
 			);
 			path = IntegrationSpecs;
 			sourceTree = "<group>";
@@ -160,8 +164,19 @@
 				9471F5142B7D6C270065CD44 /* get-json.txt */,
 				9471F5122B7D674F0065CD44 /* post-json.txt */,
 				9471F5132B7D69B20065CD44 /* put-json.txt */,
+				94DAA1E22B7E8B280052CA32 /* file-upload-json.txt */,
+				94DAA1E32B7E8D540052CA32 /* misc-json.txt */,
 			);
 			path = "Demo Files";
+			sourceTree = "<group>";
+		};
+		94DAA1E42B7EF2BF0052CA32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94DAA1E52B7EF2D60052CA32 /* file.txt */,
+				940435B92B653BF500C1021A /* HTTPBin.xctestplan */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		99F24D723B150CCCBE0B9E20 /* Frameworks */ = {
@@ -277,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DAA1E62B7EF2D60052CA32 /* file.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

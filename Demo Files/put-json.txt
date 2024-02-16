@@ -1,7 +1,7 @@
 -- PUT --
 
 // Note: This was generated using the iPhone 15 Pro simulator and PequenoNetworking
-// on 02/14/2024 using HTTPBin delete endpoint
+// on 02/14/2024 using HTTPBin put endpoint
 
 // Additional Note: The JSON spit out from JSONSerialization shows "<null>" for
 // "json".  However, if you use a curl command, it will actually be null:

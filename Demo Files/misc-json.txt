@@ -1,0 +1,58 @@
+-- Misc. --
+
+// Note: The purpose of this file is to show json responses from
+// httpbin that can flesh out the details of the reponse payload in full
+
+(1) All possible GET payload
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "weak"
+    },
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "22",
+        "Content-Type": "text/plain",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/get?dude=weak"
+}
+
+(2) Fully fleshed out DELETE payload using multiple requests
+
+// Using curl command
+
+{
+    "args": {
+        "dude": "weak"
+    },
+    "data": "{ \"dude\": { \"weak\": 1 } }",
+    "files": {},
+    "form": {
+        "Captain": "Jack Sparrow"
+    },
+    "headers": {
+        "Blues-Dos": "elwood",
+        "Blues-Uno": "jake",
+        "Content-Length": "22",
+        "Content-Type": "text/plain",
+        "Host": "httpbin.org",
+        "X-Amzn-Trace-Id": "12345"
+    },
+    "json": {
+        "dude": {
+            "weak": 1
+        }
+    },
+    "origin": "1.1.1.1",
+    "url": "https://httpbin.org/delete?dude=weak"
+}
+
+// Note: The files value is empty.  I'm assuming that I can populate this
+// by uploading a file and then immediately deleting it. Punting on that
+// for now.

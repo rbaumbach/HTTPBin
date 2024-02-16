@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:IntegrationSpecs/HTTPBin.xctestplan"
+            reference = "container:IntegrationSpecs/Resources/HTTPBin.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

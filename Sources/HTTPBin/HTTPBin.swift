@@ -23,10 +23,10 @@
 import Foundation
 import Utensils
 
-struct HTTPBin: Codable {
-    let args: Args
+public struct HTTPBin: Codable {
+    let args: [String: String]
     let data: String?
-    let files: File?
+    let files: [String: JSONCodable]?
     let form: [String: String]?
     let headers: [String: String]
     let json: [String: JSONCodable]?
@@ -34,10 +34,6 @@ struct HTTPBin: Codable {
     let url: String
 }
 
-struct Args: Codable { }
-
-struct Form: Codable { }
-
-struct File: Codable {
+public struct File: Codable {
     let file: String?
 }

@@ -13,8 +13,6 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                 beforeEach {
                     pequenoNetworking = PequenoNetworking(baseURL: "https://httpbin.org",
                                                           headers: nil)
-                    pequenoNetworking.debugPrint = URLSessionTaskEngine.DebugPrint(option: .all,
-                                                                                   printType: .verbose)
                 }
                 
                 describe("GET request") {
@@ -29,13 +27,15 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.files).to.beNil()
-                                    
+                                    expect(httpBinModel.args).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
-                                    
                                     expect(httpBinModel.origin).toNot.beNil()
                                     expect(httpBinModel.url).to.equal("https://httpbin.org/get")
+                                    
+                                    expect(httpBinModel.data).to.beNil()
+                                    expect(httpBinModel.files).to.beNil()
+                                    expect(httpBinModel.form).to.beNil()
+                                    expect(httpBinModel.json).to.beNil()
                                     
                                     complete()
                                 }
@@ -55,15 +55,17 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.files).to.beNil()
-                                    
+                                    expect(httpBinModel.args).to.equal(["boss": "gannon", "hero": "link"])
                                     expect(httpBinModel.headers).toNot.beEmpty()
-                                    
                                     expect(httpBinModel.origin).toNot.beNil()
                                     expect(httpBinModel.url).to.contain("https://httpbin.org/get")
                                     expect(httpBinModel.url).to.contain("boss=gannon")
                                     expect(httpBinModel.url).to.contain("hero=link")
+                                    
+                                    expect(httpBinModel.data).to.beNil()
+                                    expect(httpBinModel.files).to.beNil()
+                                    expect(httpBinModel.form).to.beNil()
+                                    expect(httpBinModel.json).to.beNil()
                                     
                                     complete()
                                 }
@@ -84,10 +86,10 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                                                         
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.data).to.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
-                                    expect(httpBinModel.form).toNot.beNil()
+                                    expect(httpBinModel.args).to.beEmpty()
+                                    expect(httpBinModel.data).to.beEmpty()
+                                    expect(httpBinModel.files).to.beEmpty()
+                                    expect(httpBinModel.form).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
                                     expect(httpBinModel.json).to.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
@@ -111,10 +113,10 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
+                                    expect(httpBinModel.args).to.equal(["boss": "gannon", "hero": "link"])
                                     expect(httpBinModel.data).to.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
-                                    expect(httpBinModel.form).toNot.beNil()
+                                    expect(httpBinModel.files).to.beEmpty()
+                                    expect(httpBinModel.form).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
                                     expect(httpBinModel.json).to.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
@@ -141,10 +143,10 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.data).to.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
-                                    expect(httpBinModel.form).toNot.beNil()
+                                    expect(httpBinModel.args).to.beEmpty()
+                                    expect(httpBinModel.data).to.beEmpty()
+                                    expect(httpBinModel.files).to.beEmpty()
+                                    expect(httpBinModel.form).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
                                     expect(httpBinModel.json).to.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
@@ -160,22 +162,24 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                         it("completes with codable HTTPBin model") {
                             hangOn { complete in
                                 pequenoNetworking.post(endpoint: "/post",
-                                                       body: ["junk-drawer": ["sissors", "tape", "matches"],
-                                                              "number-of-dogs": 2]) { (result: Result<HTTPBin, Error>) in
+                                                       body: ["junk-drawer": ["sissors", "tape", "matches"]]) { (result: Result<HTTPBin, Error>) in
                                     guard let httpBinModel = try? result.get() else {
                                         failSpec()
                                         
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.data).to.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
-                                    expect(httpBinModel.form?.keys.count).to.equal(1)
+                                    expect(httpBinModel.args).to.beEmpty()
+                                    expect(httpBinModel.data).to.beEmpty()
+                                    expect(httpBinModel.files).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
                                     expect(httpBinModel.json).to.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
                                     expect(httpBinModel.url).to.equal("https://httpbin.org/post")
+                                    
+                                    let expectedForm = ["{\"junk-drawer\":[\"sissors\",\"tape\",\"matches\"]}": ""]
+                                    
+                                    expect(httpBinModel.form).to.equal(expectedForm)
                                     
                                     complete()
                                 }
@@ -196,10 +200,10 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.data).to.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
-                                    expect(httpBinModel.form).toNot.beNil()
+                                    expect(httpBinModel.args).to.beEmpty()
+                                    expect(httpBinModel.data).to.beEmpty()
+                                    expect(httpBinModel.files).to.beEmpty()
+                                    expect(httpBinModel.form).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
                                     expect(httpBinModel.json).to.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
@@ -215,22 +219,25 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                         it("completes with codable HTTPBin model") {
                             hangOn { complete in
                                 pequenoNetworking.put(endpoint: "/put",
-                                                      body: ["junk-drawer": ["sissors", "tape", "matches"],
-                                                             "number-of-dogs": 2]) { (result: Result<HTTPBin, Error>) in
+                                                      body: ["junk-drawer": ["sissors", "tape", "matches"]]) { (result: Result<HTTPBin, Error>) in
                                     guard let httpBinModel = try? result.get() else {
                                         failSpec()
                                         
                                         return
                                     }
                                     
-                                    expect(httpBinModel.args).toNot.beNil()
-                                    expect(httpBinModel.data).toNot.equal(String.empty)
-                                    expect(httpBinModel.files).toNot.beNil()
+                                    expect(httpBinModel.args).to.beEmpty()
+                                    expect(httpBinModel.data).to.equal("{\"junk-drawer\":[\"sissors\",\"tape\",\"matches\"]}")
+                                    expect(httpBinModel.files).to.beEmpty()
                                     expect(httpBinModel.form).to.beEmpty()
                                     expect(httpBinModel.headers).toNot.beEmpty()
-                                    expect(httpBinModel.json).toNot.beNil()
                                     expect(httpBinModel.origin).toNot.beNil()
                                     expect(httpBinModel.url).to.equal("https://httpbin.org/put")
+                                    
+                                    let expectedJSON: [String: JSONCodable] = ["junk-drawer": ["sissors", "tape", "matches"]]
+                                    
+                                    expect(httpBinModel.json).to.equal(expectedJSON)
+
                                     
                                     complete()
                                 }
@@ -347,6 +354,61 @@ final class HTTPBinIntegrationSpec: QuickSpec {
                                 
                                 complete()
                             }
+                        }
+                    }
+                }
+            }
+            
+            describe("file upload") {
+                var testBundle: Bundle!
+                var multipartFormData: Data!
+                
+                beforeEach {
+                    testBundle = Bundle(for: self)
+                    
+                    let fileURL = testBundle.url(forResource: "file",
+                                                 withExtension: "txt")!
+                    
+                    let fileData = try! Data(contentsOf: fileURL)
+                    
+                    let boundaryUUID = UUID().uuidString
+                    
+                    multipartFormData = MultipartFormDataBuilder().buildMultipartFormData(data: fileData,
+                                                                                          filename: "file.txt",
+                                                                                          boundaryUUID: boundaryUUID,
+                                                                                          contentType: .octetStream)
+                    
+                    let multipartFormHeader = ["Content-Type": "multipart/form-data; boundary=Boundary-\(boundaryUUID)"]
+                    
+                    pequenoNetworking = PequenoNetworking(baseURL: "https://httpbin.org",
+                                                          headers: multipartFormHeader)
+                }
+
+                it("completes with codable HTTPBin model") {
+                    hangOn { complete in
+                        pequenoNetworking.uploadFile(endpoint: "/post",
+                                                     parameters: nil,
+                                                     data: multipartFormData) { (result: Result<HTTPBin, Error>) in
+                            guard let httpBinModel = try? result.get() else {
+                                failSpec()
+                                                                    
+                                return
+                            }
+
+                            expect(httpBinModel.args).to.beEmpty()
+                            expect(httpBinModel.data).to.beEmpty()
+                            expect(httpBinModel.form).to.beEmpty()
+                            expect(httpBinModel.headers).toNot.beEmpty()
+                            expect(httpBinModel.json).to.beNil()
+                            expect(httpBinModel.origin).toNot.beNil()
+                            expect(httpBinModel.url).to.equal("https://httpbin.org/post")
+                            
+                            let expectedFiles: [String: JSONCodable] = ["file": "Hi httpbin!\n"]
+                            
+                            expect(httpBinModel.files).to.equal(expectedFiles)
+
+                            
+                            complete()
                         }
                     }
                 }

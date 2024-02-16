@@ -1,7 +1,7 @@
 -- GET --
 
 // Note: This was generated using the iPhone 15 Pro simulator and PequenoNetworking
-// on 02/14/2024 using HTTPBin delete endpoint
+// on 02/14/2024 using HTTPBin get endpoint
 
 // (1) Without headers and without parameters
 
