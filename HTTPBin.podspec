@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'HTTPBin'
-  spec.version               = '0.0.1'
+  spec.version               = '0.0.2'
   spec.summary               = 'Codable Model for HTTPBin'
   spec.homepage              = 'https://github.com/rbaumbach/HTTPBin'
   spec.license               = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }

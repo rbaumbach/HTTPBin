@@ -33,7 +33,3 @@ public struct HTTPBin: Codable {
     public let origin: String
     public let url: String
 }
-
-public struct File: Codable {
-    let file: String?
-}
