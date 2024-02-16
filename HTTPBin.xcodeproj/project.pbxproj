@@ -54,6 +54,7 @@
 		94DAA1E32B7E8D540052CA32 /* misc-json.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "misc-json.txt"; sourceTree = "<group>"; };
 		94DAA1E52B7EF2D60052CA32 /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		94DAA1E72B7F9C860052CA32 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		94DAA1E82B7F9E1A0052CA32 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +154,7 @@
 				941639E32B653DB9005AC3E3 /* Gemfile */,
 				941639E92B6540D2005AC3E3 /* HTTPBin.podspec */,
 				941639E12B653DB9005AC3E3 /* MIT-LICENSE.txt */,
+				94DAA1E82B7F9E1A0052CA32 /* Package.swift */,
 				941639E22B653DB9005AC3E3 /* Podfile */,
 				941639F42B65499F005AC3E3 /* README.md */,
 			);
