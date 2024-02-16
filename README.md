@@ -9,6 +9,24 @@ A `Codable` model for the [httpbin api](https://httpbin.org)
 1.  Clone repository from github and copy files directly, or add it as a git submodule.
 2.  Add all files from `Source` directory to your project.
 
+## Usage
+
+Anywhere you want to use a `Codable HTTPBin`.
+
+```swift
+    let networking = PequenoNetworking(baseURL: "https://httpbin.org")
+    
+    networking.get(endpoint: "/get",
+                   parameters: nil) { (result: Result<HTTPBin, Error>) in
+        let httpBin = try? result.get()
+    }
+    
+    // or
+    
+    let httpBin = try? JSONDecoder().decode(HTTPBin.self, from: jsonData)
+```
+
+The above example uses `PequenoNetworking` from the [Utensils project](https://github.com/rbaumbach/Utensils), but this can be used wherever you serialize, or deserialize json using the `Codable` apis.
 
 ## Testing
 

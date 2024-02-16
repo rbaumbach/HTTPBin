@@ -8,7 +8,7 @@ final class HTTPBinIntegrationSpec: QuickSpec {
     override class func spec() {
         describe("HTTPBin") {
             var pequenoNetworking: PequenoNetworking!
-
+            
             describe("without headers") {
                 beforeEach {
                     pequenoNetworking = PequenoNetworking(baseURL: "https://httpbin.org",
