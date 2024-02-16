@@ -24,14 +24,14 @@ import Foundation
 import Utensils
 
 public struct HTTPBin: Codable {
-    let args: [String: String]
-    let data: String?
-    let files: [String: JSONCodable]?
-    let form: [String: String]?
-    let headers: [String: String]
-    let json: [String: JSONCodable]?
-    let origin: String
-    let url: String
+    public let args: [String: String]
+    public let data: String?
+    public let files: [String: JSONCodable]?
+    public let form: [String: String]?
+    public let headers: [String: String]
+    public let json: [String: JSONCodable]?
+    public let origin: String
+    public let url: String
 }
 
 public struct File: Codable {
